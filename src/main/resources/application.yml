@@ -1,0 +1,24 @@
+server:
+  port: 9001
+
+# 设置nacos的地址（配置中心）
+nacos:
+  discovery:
+    server-addr: 127.0.0.1:8848
+
+# Dubbo 广播方式配置，如果调用不稳定可以修改为直连模式：https://codechina.csdn.net/KnowledgePlanet/Lottery/-/issues/1
+dubbo:
+  application:
+    name: Lottery-API
+    version: 1.0.0
+  registry:
+    address: nacos://127.0.0.1:8848
+  protocol:
+    name: dubbo
+    port: -1
+
+wx:
+  config:
+    originalid: gh_48d07e7d6c5e
+    appid: wx20487817fb632b82
+    token: zhijianhao
